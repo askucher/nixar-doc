@@ -1,15 +1,27 @@
 {
-  "homepage": "https://github.com/askucher/nixar-doc",
-  "version": "0.1.305",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
-  "main": "index.js",
+  "name": "askucher",
+  "uperversion": "0.1",
+  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/askucher/nixar-doc.git"
   },
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
-  "uperversion": "0.1",
-  "name": "askucher",
+  "main": "index.js",
+  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "version": "0.1.306",
+  "homepage": "https://github.com/askucher/nixar-doc",
+  "subversion": 306,
+  "bugs": {
+    "url": "https://github.com/askucher/nixar-doc/issues"
+  },
+  "license": "ISC",
+  "keywords": [
+    "nixar"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
@@ -20,16 +32,7 @@
     "sync": "^0.2.5",
     "xonom": "^0.1.74"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "nixar"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/askucher/nixar-doc/issues"
-  },
-  "subversion": 305
+  "bin": {
+    "nixardoc": "./index.js"
+  }
 }
