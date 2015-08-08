@@ -1,8 +1,8 @@
 {
-  "bugs": {
-    "url": "https://github.com/askucher/nixar-doc/issues"
-  },
-  "version": "0.1.308",
+  "keywords": [
+    "nixar"
+  ],
+  "version": "0.1.309",
   "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
   "main": "index.js",
   "repository": {
@@ -15,7 +15,11 @@
   ],
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "uperversion": "0.1",
-  "subversion": 308,
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askucher/nixar-doc/issues"
+  },
+  "subversion": 309,
   "homepage": "https://github.com/askucher/nixar-doc",
   "name": "nixardoc",
   "bin": {
@@ -34,9 +38,5 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "nixar"
-  ],
-  "license": "ISC"
+  }
 }
