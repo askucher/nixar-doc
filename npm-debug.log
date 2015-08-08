@@ -1,0 +1,81 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/v0.10.35/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/v0.10.35/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/ubuntu/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/ubuntu/.npm/askucher/0.1.304/package.tgz', '.' ]
+11 verbose tarball /home/ubuntu/.npm/askucher/0.1.304/package.tgz
+12 verbose folder .
+13 info prepublish askucher@0.1.304
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /home/ubuntu/.npm/1f1177db-tar.lock
+16 silly lockFile 2195ba9d-npm-askucher-0-1-304-package-tgz tar:///home/ubuntu/.npm/askucher/0.1.304/package.tgz
+17 verbose lock tar:///home/ubuntu/.npm/askucher/0.1.304/package.tgz /home/ubuntu/.npm/2195ba9d-npm-askucher-0-1-304-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 2195ba9d-npm-askucher-0-1-304-package-tgz tar:///home/ubuntu/.npm/askucher/0.1.304/package.tgz
+21 silly lockFile 2195ba9d-npm-askucher-0-1-304-package-tgz tar:///home/ubuntu/.npm/askucher/0.1.304/package.tgz
+22 silly lockFile 6c4b0786-ntu-npm-askucher-0-1-304-package /home/ubuntu/.npm/askucher/0.1.304/package
+23 verbose lock /home/ubuntu/.npm/askucher/0.1.304/package /home/ubuntu/.npm/6c4b0786-ntu-npm-askucher-0-1-304-package.lock
+24 silly lockFile 6c4b0786-ntu-npm-askucher-0-1-304-package /home/ubuntu/.npm/askucher/0.1.304/package
+25 silly lockFile 6c4b0786-ntu-npm-askucher-0-1-304-package /home/ubuntu/.npm/askucher/0.1.304/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { subversion: 304,
+28 silly publish   uperversion: '0.1',
+28 silly publish   author: { name: 'Mostafa Eweda', email: 'mo.eweda@gmail.com' },
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'https://github.com/askucher/nixar-doc.git' },
+28 silly publish   main: 'index.js',
+28 silly publish   description: 'A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.',
+28 silly publish   version: '0.1.304',
+28 silly publish   homepage: 'https://github.com/askucher/nixar-doc',
+28 silly publish   bugs: { url: 'https://github.com/askucher/nixar-doc/issues' },
+28 silly publish   license: 'ISC',
+28 silly publish   keywords: [ 'nixar' ],
+28 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+28 silly publish   devDependencies: {},
+28 silly publish   dependencies:
+28 silly publish    { async: '~0.2.8',
+28 silly publish      express: '~3.2.4',
+28 silly publish      'github-api': '^0.10.6',
+28 silly publish      'js-beautify': '^1.5.10',
+28 silly publish      'prelude-ls': '^1.1.2',
+28 silly publish      'socket.io': '~0.9.14',
+28 silly publish      sync: '^0.2.5',
+28 silly publish      xonom: '^0.1.74' },
+28 silly publish   name: 'askucher',
+28 silly publish   readme: 'Copy documentation of nixar from github gists',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '85ea85e89c32c1fd5c48c0c6702708eb34a2106c',
+28 silly publish   _id: 'askucher@0.1.304',
+28 silly publish   _shasum: '7bb8f461101729983f5d2f93fa37514694d89c58',
+28 silly publish   _from: '.' }
+29 error need auth auth and email required for publishing
+29 error need auth You need to authorize this machine using `npm adduser`
+30 error System Linux 3.14.13-c9
+31 error command "/home/ubuntu/.nvm/v0.10.35/bin/node" "/home/ubuntu/.nvm/v0.10.35/bin/npm" "publish"
+32 error cwd /home/ubuntu/workspace
+33 error node -v v0.10.35
+34 error npm -v 1.4.28
+35 error code ENEEDAUTH
+36 verbose exit [ 1, true ]
