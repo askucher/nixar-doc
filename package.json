@@ -1,8 +1,6 @@
 {
-  "bin": {
-    "nixardoc": "./nixardoc"
-  },
-  "version": "0.1.316",
+  "homepage": "https://github.com/askucher/nixar-doc",
+  "version": "0.1.317",
   "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
   "main": "index.js",
   "repository": {
@@ -15,6 +13,10 @@
   ],
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "uperversion": "0.1",
+  "name": "nixardoc",
+  "bin": {
+    "nixardoc": "./nixardoc"
+  },
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
@@ -36,7 +38,5 @@
   "bugs": {
     "url": "https://github.com/askucher/nixar-doc/issues"
   },
-  "subversion": 316,
-  "homepage": "https://github.com/askucher/nixar-doc",
-  "name": "nixardoc"
+  "subversion": 317
 }
