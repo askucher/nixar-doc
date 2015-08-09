@@ -1,10 +1,11 @@
 Github = require \github-api
 github = new Github do 
   token: "f05bc5885f17f05d984ec5f22e71d663ef52d2d" + "7"
-  auth: "oauth"
+  auth: \oauth
 user = github.get-user!
 p = require \prelude-ls
-beautify = require('js-beautify').js_beautify
+beautify = require(\js-beautify).js_beautify
+md = require(\node-markdown).Markdown
 fs = require \fs
 require(\sync) ->
  gists = user.user-gists.sync null, \askucher
@@ -12,12 +13,15 @@ require(\sync) ->
     name: box.name
     files: box.gist.read.sync(null).files |> p.obj-to-pairs |> p.map (-> it.1.content)
  apply = (gist)->
-     json = JSON.stringify(gist, null, 4)
-     name = "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
-     console.log name
+     json =
+         JSON.stringify do 
+             * name: gist.name
+               files: gist.files.map(md)
+             * null
+             * 4
      fs.write-file-sync do
         * "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
-        * beautify do 
+        * beautify do
             * "module.exports = function(repo) { repo.docs.push(#json); }"
             * indent_size: 2
         * \utf8
