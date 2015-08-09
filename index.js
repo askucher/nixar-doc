@@ -26,6 +26,7 @@
     };
     apply = function(gist){
       var json;
+      console.log(gist.files.map(md));
       json = JSON.stringify({
         name: gist.name,
         files: gist.files.map(md)

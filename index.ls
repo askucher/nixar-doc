@@ -13,6 +13,7 @@ require(\sync) ->
     name: box.name
     files: box.gist.read.sync(null).files |> p.obj-to-pairs |> p.map (-> it.1.content)
  apply = (gist)->
+     console.log gist.files.map(md)
      json =
          JSON.stringify do 
              * name: gist.name
