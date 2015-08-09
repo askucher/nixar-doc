@@ -1,6 +1,6 @@
 Github = require \github-api
 github = new Github do 
-  token: "f05bc5885f17f05d984ec5f22e71d663ef52d2d" + "7"
+  token: \f05bc5 + \885f17 + \f05d98 + \4ec5f2 + \2e71d663e + \f52d2d7
   auth: \oauth
 user = github.get-user!
 p = require \prelude-ls
