@@ -13,13 +13,13 @@ require(\sync) ->
     name: box.name
     files: box.gist.read.sync(null).files |> p.obj-to-pairs |> p.map (-> it.1.content)
  apply = (gist)->
-     console.log gist.files.map(md)
      json =
          JSON.stringify do 
              * name: gist.name
                files: gist.files.map(md)
              * null
              * 4
+     console.log "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
      fs.write-file-sync do
         * "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
         * beautify do

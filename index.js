@@ -26,11 +26,11 @@
     };
     apply = function(gist){
       var json;
-      console.log(gist.files.map(md));
       json = JSON.stringify({
         name: gist.name,
         files: gist.files.map(md)
       }, null, 4);
+      console.log(process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js");
       return fs.writeFileSync(process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js", beautify("module.exports = function(repo) { repo.docs.push(" + json + "); }", {
         indent_size: 2
       }), 'utf8');
