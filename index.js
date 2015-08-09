@@ -25,13 +25,16 @@
       };
     };
     apply = function(gist){
-      var json;
+      var name, json;
+      name = process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js";
+      console.log(name);
       json = JSON.stringify({
         name: gist.name,
-        files: gist.files.map(md)
+        files: gist.files.map(function(it){
+          return md(it);
+        })
       }, null, 4);
-      console.log(process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js");
-      return fs.writeFileSync(process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js", beautify("module.exports = function(repo) { repo.docs.push(" + json + "); }", {
+      return fs.writeFileSync(name, beautify("module.exports = function(repo) { repo.docs.push(" + json + "); }", {
         indent_size: 2
       }), 'utf8');
     };

@@ -11,17 +11,19 @@ require(\sync) ->
  gists = user.user-gists.sync null, \askucher
  transform = (box)->
     name: box.name
-    files: box.gist.read.sync(null).files |> p.obj-to-pairs |> p.map (-> it.1.content)
+    files: box.gist.read.sync(null).files |> p.obj-to-pairs
+                                          |> p.map (-> it.1.content)
  apply = (gist)->
+     name = "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
+     console.log name
      json =
          JSON.stringify do 
              * name: gist.name
-               files: gist.files.map(md)
+               files: gist.files.map(-> md it)
              * null
              * 4
-     console.log "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
      fs.write-file-sync do
-        * "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
+        * name
         * beautify do
             * "module.exports = function(repo) { repo.docs.push(#json); }"
             * indent_size: 2
