@@ -1,8 +1,6 @@
 {
-  "keywords": [
-    "nixar"
-  ],
-  "version": "0.1.319",
+  "devDependencies": {},
+  "version": "0.1.320",
   "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
   "main": "index.js",
   "repository": {
@@ -15,11 +13,17 @@
   ],
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "uperversion": "0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nixar"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/askucher/nixar-doc/issues"
   },
-  "subversion": 319,
+  "subversion": 320,
   "homepage": "https://github.com/askucher/nixar-doc",
   "name": "nixardoc",
   "bin": {
@@ -35,9 +39,5 @@
     "node-markdown": "^0.1.1",
     "prelude-ls": "^1.1.2",
     "socket.io": "~0.9.14"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
