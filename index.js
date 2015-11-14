@@ -7,6 +7,7 @@
     auth: 'oauth'
   });
   user = github.getUser();
+  console.log(user);
   p = require('prelude-ls');
   beautify = require('js-beautify').js_beautify;
   md = require('node-markdown').Markdown;

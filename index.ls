@@ -3,6 +3,7 @@ github = new Github do
   token: \f05bc5 + \885f17 + \f05d98 + \4ec5f2 + \2e71d663e + \f52d2d7
   auth: \oauth
 user = github.get-user!
+console.log user
 p = require \prelude-ls
 beautify = require(\js-beautify).js_beautify
 md = require(\node-markdown).Markdown
