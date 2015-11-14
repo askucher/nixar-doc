@@ -14,20 +14,23 @@ require(\sync) ->
     files: box.gist.read.sync(null).files |> p.obj-to-pairs
                                           |> p.map (-> it.1.content)
  apply = (gist)->
-     name = "#{process.cwd!}/node_modules/nixar/docs/#{gist.name}.js"
-     console.log name
-     json =
-         JSON.stringify do 
-             * name: gist.name
-               files: gist.files.map(-> md it)
-             * null
-             * 4
-     fs.write-file-sync do
-        * name
-        * beautify do
-            * "module.exports = function(repo) { repo.docs.push(#json); }"
-            * indent_size: 2
-        * \utf8
+     mkdirp = require \mkdirp
+     dir = "#{process.cwd!}/node_modules/nixar/docs"
+     mkdirp dir, ->
+         name = "#dir/#{gist.name}.js"
+         json =
+             JSON.stringify do 
+                 * name: gist.name
+                   files: gist.files.map(-> md it)
+                 * null
+                 * 4
+         fs.write-file-sync do
+            * name
+            * beautify do
+                * "module.exports = function(repo) { repo.docs.push(#json); }"
+                * indent_size: 2
+            * \utf8
+         console.log \created, name
  gists
    .filter(-> it.description.index-of(\nixar) > -1)
    .map(-> name: it.description.split(\.).1, id: it.id)

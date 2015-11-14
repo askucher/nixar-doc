@@ -25,18 +25,23 @@
       };
     };
     apply = function(gist){
-      var name, json;
-      name = process.cwd() + "/node_modules/nixar/docs/" + gist.name + ".js";
-      console.log(name);
-      json = JSON.stringify({
-        name: gist.name,
-        files: gist.files.map(function(it){
-          return md(it);
-        })
-      }, null, 4);
-      return fs.writeFileSync(name, beautify("module.exports = function(repo) { repo.docs.push(" + json + "); }", {
-        indent_size: 2
-      }), 'utf8');
+      var mkdirp, dir;
+      mkdirp = require('mkdirp');
+      dir = process.cwd() + "/node_modules/nixar/docs";
+      return mkdirp(dir, function(){
+        var name, json;
+        name = dir + "/" + gist.name + ".js";
+        json = JSON.stringify({
+          name: gist.name,
+          files: gist.files.map(function(it){
+            return md(it);
+          })
+        }, null, 4);
+        fs.writeFileSync(name, beautify("module.exports = function(repo) { repo.docs.push(" + json + "); }", {
+          indent_size: 2
+        }), 'utf8');
+        return console.log('created', name);
+      });
     };
     return gists.filter(function(it){
       return it.description.indexOf('nixar') > -1;
