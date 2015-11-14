@@ -16,6 +16,7 @@ require(\sync) ->
  apply = (gist)->
      mkdirp = require \mkdirp
      dir = "#{process.cwd!}/node_modules/nixar/docs"
+     console.log \target-directory, dir
      mkdirp dir, ->
          name = "#dir/#{gist.name}.js"
          json =

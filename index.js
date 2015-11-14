@@ -28,6 +28,7 @@
       var mkdirp, dir;
       mkdirp = require('mkdirp');
       dir = process.cwd() + "/node_modules/nixar/docs";
+      console.log('target-directory', dir);
       return mkdirp(dir, function(){
         var name, json;
         name = dir + "/" + gist.name + ".js";
