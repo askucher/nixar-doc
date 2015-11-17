@@ -17,9 +17,8 @@
   });
   Sync(function(){
     var gists, transform, apply;
-    console.log('start=sync');
+    console.log('start=sync2');
     gists = user.userGists.sync(null, 'askucher');
-    console.log(gists);
     transform = function(box){
       return {
         name: box.name,

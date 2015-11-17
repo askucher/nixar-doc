@@ -13,9 +13,8 @@ Sync ->
  consoel.log \start=sync   
 
 Sync ->
- console.log \start=sync
+ console.log \start=sync2
  gists = user.user-gists.sync null, \askucher
- console.log gists
  transform = (box)->
     name: box.name
     files: box.gist.read.sync(null).files |> p.obj-to-pairs
