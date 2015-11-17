@@ -7,14 +7,15 @@
     auth: 'oauth'
   });
   user = github.getUser();
-  console.log(user);
   p = require('prelude-ls');
   beautify = require('js-beautify').js_beautify;
   md = require('node-markdown').Markdown;
   fs = require('fs');
   require('sync')(function(){
     var gists, transform, apply;
+    consoel.log('start=sync');
     gists = user.userGists.sync(null, 'askucher');
+    console.log(gists);
     transform = function(box){
       return {
         name: box.name,
