@@ -7,8 +7,13 @@ p = require \prelude-ls
 beautify = require(\js-beautify).js_beautify
 md = require(\node-markdown).Markdown
 fs = require \fs
-require(\sync) ->
- consoel.log \start=sync
+Sync = require(\sync) 
+
+Sync ->
+ consoel.log \start=sync   
+
+Sync ->
+ console.log \start=sync
  gists = user.user-gists.sync null, \askucher
  console.log gists
  transform = (box)->

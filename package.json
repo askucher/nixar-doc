@@ -1,8 +1,6 @@
 {
-  "keywords": [
-    "nixar"
-  ],
-  "version": "0.1.334",
+  "devDependencies": {},
+  "version": "0.1.335",
   "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
   "main": "index.js",
   "repository": {
@@ -15,30 +13,32 @@
   ],
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "uperversion": "0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nixar"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/askucher/nixar-doc/issues"
   },
-  "subversion": 334,
+  "subversion": 335,
   "homepage": "https://github.com/askucher/nixar-doc",
   "name": "nixardoc",
   "bin": {
     "nixardoc": "./nixardoc"
   },
   "dependencies": {
-    "sync": "latest",
-    "xonom": "^0.1.74",
-    "express": "~3.2.4",
-    "async": "~0.2.8",
-    "js-beautify": "^1.5.10",
-    "github-api": "^0.10.6",
-    "node-markdown": "^0.1.1",
-    "mkdirp": "^0.5.1",
     "socket.io": "~0.9.14",
-    "prelude-ls": "^1.1.2"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prelude-ls": "^1.1.2",
+    "xonom": "^0.1.74",
+    "sync": "^0.2.5",
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "github-api": "^0.10.6",
+    "js-beautify": "^1.5.10",
+    "mkdirp": "^0.5.1",
+    "node-markdown": "^0.1.1"
   }
 }
