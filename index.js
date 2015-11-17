@@ -28,7 +28,7 @@
     apply = function(gist){
       var mkdirp, dir;
       mkdirp = require('mkdirp');
-      dir = 'docs';
+      dir = './docs';
       console.log('target-directory', dir);
       return mkdirp(dir, function(){
         var name, json;
