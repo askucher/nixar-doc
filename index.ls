@@ -16,7 +16,7 @@ require(\sync) ->
                                           |> p.map (-> it.1.content)
  apply = (gist)->
      mkdirp = require \mkdirp
-     dir = "#{process.cwd!}/node_modules/nixar/docs"
+     dir = \docs
      console.log \target-directory, dir
      mkdirp dir, ->
          name = "#dir/#{gist.name}.js"
